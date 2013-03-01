@@ -1,0 +1,32 @@
+<div class="post">
+    <div class="content">
+        <div class="title"><h3><a href="{{ page.url }}">{{ page.title }}</a></h3></div>
+
+        <div class="meta">
+            <span class="date">{{ page.date | date: "%b %e, %Y" }}</span>
+        </div>
+
+        <div class="body-post">
+            {% if content %}
+                {{ content }}
+            {% else %}
+                {{ page.content }}
+            {% endif %}
+
+            <!-- if tags -->
+            {% if page.tags %}
+            <ul class="tags">
+                {% for tag in page.tags %} 
+                <li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}/{{ tag }}">{{tag}}</a></li>
+                {% endfor %}
+            </ul>  
+            {% endif %}
+            <!-- endif -->
+        </div><!--end body-->
+    </div><!--end content-->
+    <div class="clear"></div>
+</div><!--end post-->
+
+{% if checkTitle != 'Drew Stokes' %}
+{% include JB/comments %}
+{% endif %}

@@ -1,0 +1,13 @@
+---
+layout: page
+title: Drew Stokes
+tagline: Software Engineer
+---
+{% include JB/setup %}
+
+{% assign checkTitle = page.title %}
+{% for page in paginator.posts %}
+  {% include themes/tom/post.html %}
+{% endfor %}
+
+{% include JB/pagination %}
