@@ -49,7 +49,7 @@ to github is as simple as:
 We use Jenkins for continuous integration and interface aside, we love it. The
 only logical next step for us was having Jenkins create our versions for us
 once the builds passed. We accomplish this by creating descriptive branches
-that contain the feature name and sermver distinction. \*When we push a branch
+that contain the feature name and semver distinction. \*When we push a branch
 like `minor/awesomesauce` Jenkins knows to run `npm version minor` followed by
 a git push. Because we're pretty diligent about unit testing with Mocha this
 means we get package versioning for free when code passes our tests. The only
